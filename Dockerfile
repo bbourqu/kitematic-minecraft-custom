@@ -1,4 +1,4 @@
-# Minecraft 1.10.2 Dockerfile - Example with notes
+# Minecraft 1.10.2 Dockerfile
 
 
 # Use the offical Debian Docker image with a specified version tag, Wheezy, so not all
@@ -24,4 +24,4 @@ VOLUME /data
 EXPOSE 25565
 
 #Automatically accept Minecraft EULA, and start Minecraft server
-CMD echo eula=true > /data/eula.txt && java -jar /minecraft_server.1.10.2.jar
+CMD echo eula=true > /data/eula.txt && java -Xms1G -Xmx1G -jar /minecraft_server.1.10.2.jar nogui 
